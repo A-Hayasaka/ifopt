@@ -46,7 +46,7 @@ if(NOT WIN32)
   if(DEFINED ENV{IPOPT_DIR})
     set(IPOPT_DIR $ENV{IPOPT_DIR} CACHE PATH "Path to IPOPT build directory")
 
-    set(IPOPT_INCLUDE_DIRS ${IPOPT_DIR}/include/coin)
+    set(IPOPT_INCLUDE_DIRS ${IPOPT_DIR}/include/coin-or)
     find_library(IPOPT_LIBRARIES ipopt ${IPOPT_DIR}/lib
                                      ${IPOPT_DIR}/lib/coin
                                      NO_DEFAULT_PATH)
@@ -130,7 +130,7 @@ else()
 
   set(IPOPT_DIR $ENV{IPOPT_DIR} CACHE PATH "Path to IPOPT build directory")
 
-  set(IPOPT_INCLUDE_DIRS ${IPOPT_DIR}/include/coin)
+  set(IPOPT_INCLUDE_DIRS ${IPOPT_DIR}/include/coin-or)
   find_library(IPOPT_IPOPT_LIBRARY_RELEASE libipopt ${IPOPT_DIR}/lib
                                                     ${IPOPT_DIR}/lib/coin
                                                     NO_DEFAULT_PATH)
